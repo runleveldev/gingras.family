@@ -18,5 +18,12 @@
 				}
 			?>
 		</ul>
+		<h2>Getting Started</h2>
+		<ol>
+			<li>Create and send me an SSH key</li>
+			<li>SSH to gingras.family using your username</li>
+			<li>Edit files in <code>~/pulic_html</code></li>
+			<li>Navigate to <a href="#">https://gingras.family/~yourname</a> to see your website!</li>
+		</ol>
 	</body>
 </html>
