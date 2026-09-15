@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Welcome to gingras.family!</title>
+		<meta name="viewport" content="width=device-width" />
 	</head>
 	<body>
 		<h1>Welcome to gingras.family!</h1>
