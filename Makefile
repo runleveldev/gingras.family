@@ -1,8 +1,27 @@
+FILES = /etc/nftables.conf /var/www/html/ /etc/skel/ /etc/apache2/
+RSYNC_ARGS =
+
+.PHONY: help
+help:
+	@echo ""
+	@echo "Usage: make [target] [variables]"
+	@echo ""
+	@echo "Available targets:"
+	@echo "  help: This help text. (default)"
+	@echo "  deploy: Copy local files known to git to the server"
+	@echo "  sync: Copy remote files to the local repo"
+	@echo ""
+	@echo "Supported variables:"
+	@echo "  RSYNC_ARGS: Extra arguments passed to rsync"
+
 .PHONY: deploy
 deploy:
-	rsync -av ./var/www/html/. root@gingras.family:/var/www/html/.
-	rsync -av ./etc/skel/. root@gingras.family:/etc/skel/.
+	@for f in $(FILES); do \
+		rsync -vrltE --no-owner --no-group $(RSYNC_ARGS) "./$${f#/}" "root@gingras.family:$$f"; \
+	done
 
 .PHONY: sync
 sync:
-	rsync -av root@gingras.family:/etc/apache2/. ./etc/apache2/.
+	@for f in $(FILES); do \
+		rsync -vrltE --no-owner --no-group $(RSYNC_ARGS) "root@gingras.family:$$f" "./$${f#/}" ; \
+	done
