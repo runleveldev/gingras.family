@@ -33,7 +33,7 @@
 					<details name="ssh-os">
 						<summary role="button">Windows</summary>
 						<p>
-							<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> is the de-facto standard on Windows. After installing it, refer to <a href="https://the.earth.li/~sgtatham/putty/0.85/htmldoc/Chapter8.html#pubkey-puttygen">Chapter 8: Using public keys for SSH authentication</a> for generating and using SSH keys for authentication.
+							<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> is the de-facto standard on Windows. After installing it, refer to <a href="https://the.earth.li/~sgtatham/putty/0.85/htmldoc/Chapter8.html#pubkey-puttygen">Chapter 8: Using public keys for SSH authentication</a> for generating and using SSH keys for authentication. I specifically need the public key in the format per the section <a href="https://the.earth.li/~sgtatham/putty/0.85/htmldoc/Chapter8.html#puttygen-pastekey">8.2.12 ‘Public key for pasting into OpenSSH authorized_keys file’</a>.
 						</p>
 					</details>
 					<details name="ssh-os">
