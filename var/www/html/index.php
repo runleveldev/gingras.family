@@ -38,7 +38,7 @@
 					</details>
 					<details name="ssh-os">
 						<summary role="button">MacOS</summary>
-						<p>MacOS can follow similar instructions to Linux below, but if you prefer a GUI based approach, <a href="https://secretive.dev/">Secretive</a> is an interesting option that securely stores the private key in the MacOS secure enclave.</p>
+						<p>MacOS can follow similar instructions to Linux below, but if you prefer a GUI based approach, <a href="https://secretive.dev/">Secretive</a> is an interesting option that securely stores the private key in the MacOS Secure Enclave.</p>
 					</details>
 					<details name="ssh-os">
 						<summary role="button">Linux</summary>
