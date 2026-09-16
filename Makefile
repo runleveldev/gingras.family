@@ -7,7 +7,7 @@ help:
 	@echo "Usage: make [target] [variables]"
 	@echo ""
 	@echo "Available targets:"
-	@echo "  help: This help text. (default)"
+	@echo "  help: This help text (default)"
 	@echo "  deploy: Copy local files known to git to the server"
 	@echo "  sync: Copy remote files to the local repo"
 	@echo ""
