@@ -55,6 +55,12 @@
 					<li>Navigate to <a href="#"><?= $_SERVER['HTTPS'] ? 'https' : 'http' ?>://<?= $_SERVER['HTTP_HOST'] ?>/~yourname</a> to see your website!</li>
 				</ol>
 			</section>
+			<section id="about">
+				<h2>About</h2>
+				<p>gingras.family is an intentionally simple website. Every family member is entitled to a user account on a shared Linux server which will grow and have more services as time goes on. To start with, the server is a shared web hosting platform. Based on the Apache2 webserver, every user gets a workspace to host HTML, PHP, or CGI applications. By copying files into your home directory under <code>~/public_html</code> those files are immediately visible on the site under the <code>/~username</code> path. Under that path you can do anything you can imagine. Maybe you host a personal blog built with a static site generator. Maybe you want to develop PHP applications. Maybe you want to put pictures of your cat in a scrapbook. Whatever it is, if you can build it, you can host it.</p>
+				<p>While you're free to organize your home directory however you see fit, the server itself is not a shared endeavour. I have to work pretty diligently to ensure that everyone is able to stay secure in an ever evolving online landscape. If you were to ask a modern security analyst if sharing a server between this many people is a good idea they'd probably call you crazy, but I'm determined to make it work. That said, I don't want to be a dictator over what you can do. If you find you need a change to the server's configuration outside of what you're able to make happen in your home directory, the server's important configuration is available at <a href="https://github.com/runleveldev/gingras.family">https://gitub.com/runleveldev/gingras.family</a>. You can file issues for bugs or feature requests, or, if you're inclined, submit a pull request for direct changes.</p>
+				<p>There's more to come in the future. Once I finish the shared web hosting configuration, I'm hoping to add a simple email service and maybe a database in the future to allow for full stack LAMP development. Lastly, I'm here to help. I want this to be a learning environment as well as a creative one. If you need additional help getting setup or finding out how to do something please reach out. Or, if you figure out something, let's turn it into a guide for everyone to benefit from. We can all invent a better internet together.</p>
+			</section>
 		</main>
 	</body>
 </html>
