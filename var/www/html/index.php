@@ -52,7 +52,7 @@
 					</details>
 					<li>SSH to gingras.family using your username</li>
 					<li>Edit files in <code>~/pulic_html</code></li>
-					<li>Navigate to <a href="#"><?= $_SERVER['HTTPS'] ? 'https' : 'http' ?>://yourname.<?= $_SERVER['HTTP_HOST'] ?></a> to see your website!</li>
+					<li>Navigate to <a href="#"><?= array_key_exists('HTTPS', $_SERVER) && $_SERVER['HTTPS'] ? 'https' : 'http' ?>://yourname.<?= $_SERVER['HTTP_HOST'] ?></a> to see your website!</li>
 				</ol>
 			</section>
 			<section id="about">
