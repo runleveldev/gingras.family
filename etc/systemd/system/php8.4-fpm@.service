@@ -1,0 +1,11 @@
+[Unit]
+Description=PHP 8.4 FPM for %i
+Documentation=man:php-fpm8.4(8)
+After=network.target
+
+[Service]
+Type=notify
+Environment=FPM_USER=%i
+ExecStart=/usr/sbin/php-fpm8.4 --nodaemonize --fpm-config /etc/php/8.4/fpm/php-fpm-user.conf
+ExecReload=/bin/kill -USR $MAINPID
+Restart=on-failure
