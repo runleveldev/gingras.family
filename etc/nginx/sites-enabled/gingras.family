@@ -1,0 +1,68 @@
+server {
+	listen 80;
+	listen [::]:80;
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	http2 on;
+
+	ssl_certificate /etc/ssl/certs/gingras.family.pem;
+	ssl_certificate_key /etc/ssl/private/gingras.family.key;
+
+	root /var/www/html;
+
+	index index.html index.htm index.php;
+
+	server_name gingras.family;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+	
+	# pass PHP scripts to FastCGI server
+	#
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+	
+		# With php-fpm (or other unix sockets):
+		fastcgi_pass unix:/run/php/php8.4-fpm.sock;
+		# With php-cgi (or other tcp sockets):
+		#fastcgi_pass 127.0.0.1:9000;
+	}
+}
+
+server {
+	listen 80;
+	listen [::]:80;
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	http2 on;
+
+	ssl_certificate /etc/ssl/certs/gingras.family.pem;
+	ssl_certificate_key /etc/ssl/private/gingras.family.key;
+
+	autoindex on;
+	index index.html index.htm index.php;
+
+	server_name ~(?<username>[a-zA-Z][a-zA-Z0-9_-]*\$?)\.gingras\.family$;
+
+	root /home/$username/public_html;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+	# pass PHP scripts to FastCGI server
+	#
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+	
+		# With php-fpm (or other unix sockets):
+		fastcgi_pass unix:/run/php/php8.4-fpm.sock;
+		# With php-cgi (or other tcp sockets):
+		#fastcgi_pass 127.0.0.1:9000;
+	}
+}

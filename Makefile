@@ -1,4 +1,4 @@
-FILES = /etc/nftables.conf /var/www/html/ /etc/skel/ /etc/apache2/
+FILES = /etc/nftables.conf /var/www/html/ /etc/skel/ /etc/apache2/ /etc/php/8.4/fpm/php-fpm-user.conf /etc/systemd/system/php8.4-fpm@.service /etc/nginx/
 RSYNC_ARGS =
 
 .PHONY: help
