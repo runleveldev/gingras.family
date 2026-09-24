@@ -12,6 +12,8 @@ The server has the following packages installed above the Debian 13 base. Many o
 - `nginx` Webserver
 - `php-fpm` PHP FastCGI Process Manager
 - `slapd` Standalone LDAP Daemon (Identity management)
+- `ldapscripts` LDAP User and Group management
+- `pwgen` Soft dependency of `ldapscripts`
 
 ## Infrastructure
 
