@@ -12,8 +12,10 @@ The server has the following packages installed above the Debian 13 base. Many o
 - `nginx` Webserver
 - `php-fpm` PHP FastCGI Process Manager
 - `slapd` Standalone LDAP Daemon (Identity management)
+- [`openssh-lpk`](https://code.google.com/archive/p/openssh-lpk/) Centralize SSH authorizedkeys
 - `ldapscripts` LDAP User and Group management
 - `pwgen` Soft dependency of `ldapscripts`
+- `sssd`, `sssd-tools` For syncing user information with ldap
 
 ## Infrastructure
 

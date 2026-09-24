@@ -1,4 +1,4 @@
-FILES = /var/www/html/ /etc/ldap/ /etc/ssh/
+FILES = /var/www/html/ /etc/ldap/ /etc/ssh/ /etc/ldapscripts/ldapscripts.conf /etc/sssd/
 RSYNC_ARGS =
 
 .PHONY: help
