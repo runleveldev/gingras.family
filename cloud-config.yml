@@ -1,0 +1,21 @@
+#cloud-config
+# Transition from hc-utils managed DHCP to ifupdown2 managed DHCP so the default
+# route and DNS configuration will persist through reboots.
+write_files:
+  - path: /etc/network/interfaces.d/enp7s0
+    permissions: '0644'
+    content: |
+      auto enp7s0
+      iface enp7s0 inet dhcp
+        dns-nameserver 10.0.1.2
+        dns-search east.us.gingras.family
+        post-up ip route add default via 10.0.1.1 dev enp7s0
+        pre-down ip route delete default via 10.0.1.1 dev enp7s0
+
+runcmd:
+  - [/usr/bin/apt-get, purge, -y, hc-utils]
+  - [/usr/bin/apt-get, autoremove, -y]
+
+power_state:
+  mode: reboot
+  condition: true
