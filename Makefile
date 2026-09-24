@@ -1,4 +1,4 @@
-FILES = /var/www/html/ /etc/ldap/slapd.conf
+FILES = /var/www/html/ /etc/ldap/
 RSYNC_ARGS =
 
 .PHONY: help
