@@ -43,6 +43,10 @@ mailbox_size_limit = 0
 #mailbox_command = /usr/bin/procmail -a "$EXTENSION"
 mailbox_command = 
 
+# Final delivery via Dovecot
+virtual_transport = lmtp:unix:dovecot/lmtp.sock
+mailbox_transport = lmtp:unix:dovecot/lmtp.sock
+
 # List of alias maps to use to lookup local addresses.
 # Per Debian Policy it should be /etc/aliases.
 alias_maps = hash:/etc/aliases
@@ -71,8 +75,8 @@ relayhost =
 cyrus_sasl_config_path = /etc/postfix/sasl
 
 # SMTP server RSA key and certificate in PEM format
-smtpd_tls_key_file = /etc/postfix/certs/mail.gingras.family.key
-smtpd_tls_cert_file = /etc/postfix/certs/mail.gingras.family.crt
+smtpd_tls_key_file = /etc/postfix/certs/smtp.gingras.family.key
+smtpd_tls_cert_file = /etc/postfix/certs/smtp.gingras.family.crt
 # SMTP Server security level: none|may|encrypt
 smtpd_tls_security_level = may
 

@@ -1,6 +1,6 @@
 FILES = /var/www/html/ /etc/ldap/ /etc/ssh/ /etc/ldapscripts/ldapscripts.conf \
 		/etc/login.defs /etc/nslcd.conf /etc/pam.d/ /etc/nsswitch.conf /etc/mailname \
-		/etc/aliases /etc/postfix/main.cf /etc/opendkim.conf
+		/etc/aliases /etc/postfix/main.cf /etc/opendkim.conf /etc/dovecot/
 RSYNC_ARGS =
 
 .PHONY: help
