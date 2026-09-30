@@ -75,8 +75,8 @@ relayhost =
 cyrus_sasl_config_path = /etc/postfix/sasl
 
 # SMTP server RSA key and certificate in PEM format
-smtpd_tls_key_file = /etc/postfix/certs/smtp.gingras.family.key
-smtpd_tls_cert_file = /etc/postfix/certs/smtp.gingras.family.crt
+smtpd_tls_key_file = /etc/ssl/private/gingras.family.key
+smtpd_tls_cert_file = /etc/ssl/certs/gingras.family.pem
 # SMTP Server security level: none|may|encrypt
 smtpd_tls_security_level = may
 

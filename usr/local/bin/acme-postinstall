@@ -1,0 +1,5 @@
+#!/bin/sh
+
+nginx -s reload
+dovecot reload
+postfix reload
