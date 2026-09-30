@@ -18,7 +18,7 @@ The server has the following packages installed above the Debian 13 base. Many o
 - `libnss-ldapd`, `libpam-ldapd`, `nslcd`, `nslcd-utils`, `nscd` for authentication from the LDAP directory
 - `finger`
 - `postfix`, `mailutils`, `opendkim`, `opendkim-tools` SMTP server
-- `dovecot-lmtpd` Local Delivery and IMAP
+- `dovecot-lmtpd`, `dovecot-imapd` Local Delivery and IMAP
 
 ## Infrastructure
 
